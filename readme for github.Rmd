@@ -1,0 +1,38 @@
+---
+title: "Getting and Cleaning data assignment"
+author: "Rebecca Pemberton"
+date: "13 February 2019"
+output: Tidy.data2
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+# READ ME FILE for Getting and Cleaning Week 4 assignment#
+
+##Description of what is being measured ##
+
+The experiment was carrued out on 30 volunteers aged between 19 and 48 years old. Results were of sensor signal (accelerometer and gyroscope) recording that  were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain. See 'features_info.txt' for more details. 
+
+
+##Explaining the code ##
+
+The code combined the datasets for the test and training datasets, set the names for the activities being measured and extracted the mean and standard deviation. This was used to create a new table showing the averages across each activity. 
+
+##What is contained in the new dataset (more information about what the code is doing)
+
+Data was altered using the following steps:
+
+1. Loading dplyr package into R so it can be used to run the code
+2. Setting the directory to the one where the data is stored
+3. Read the test and train files needed into r using read.table function
+4. Read the names of the variables and activities into R
+5. Merge the test and train datatsets by if they for x, y or subject
+6. Calculate mean and standard deviation and then subset using these values
+7. Name all the columns that will be used to identify data
+8. Merge all the datasets 
+9. Add descriptive names for the variables to the dataset
+10. Create a seperate text file containing the results of steps 1-9.
+
